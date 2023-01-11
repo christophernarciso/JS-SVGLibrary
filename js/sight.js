@@ -27,5 +27,9 @@ class Sight {
         this.selector = selector;
         this.width = width;
         this.height = height;
+        this.svg = new SVGElement('svg').attr({
+            viewbox: `0 0 ${width} ${height}`
+        })
+        .append(selector);
     }
 }
