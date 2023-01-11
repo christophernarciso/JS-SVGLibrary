@@ -24,13 +24,9 @@ class SVGElement {
 
 class Sight {
     constructor(selector, width, height) {
-        this.selector = selector;
-        this.width = width;
-        this.height = height;
         this.svg = new SVGElement('svg').attr({
-            viewbox: `0 0 ${width} ${height}`
-        })
-        .append(selector);
+            viewbox: `0 0 ${width} ${height}`,
+        }).append(selector);
     }
 
     draw(type, attrs) {
