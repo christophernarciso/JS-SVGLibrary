@@ -14,8 +14,8 @@ class SVGElement {
     }
 
     append(element) {
-        const parent = document.querySelector(typeof element === 'string' ? element : element.node);
-        parent.append(this.node);
+        const parent = typeof element === 'string' ? document.querySelector(element) : element.node;
+        parent.appendChild(this.node);
         return this;
     }
 
